@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 template <int T>
 constexpr auto bit = std::integral_constant<int, T>{};
@@ -33,6 +34,21 @@ public:
 		<< (*this)[bit<2>] 
 		<< (*this)[bit<1>]
 		<< (*this)[bit<0>] 
+	}
+	std::string to_string()
+	{
+		std::string string{};
+		string.push_back('0');
+		string.push_back('d');
+		string.push_back((*this)[bit<7>] ? '1' : '0');
+		string.push_back((*this)[bit<6>] ? '1' : '0');
+		string.push_back((*this)[bit<5>] ? '1' : '0');
+		string.push_back((*this)[bit<4>] ? '1' : '0');
+		string.push_back((*this)[bit<3>] ? '1' : '0');
+		string.push_back((*this)[bit<2>] ? '1' : '0');
+		string.push_back((*this)[bit<1>] ? '1' : '0');
+		string.push_back((*this)[bit<0>] ? '1' : '0');
+		return string;
 	}
 
 
