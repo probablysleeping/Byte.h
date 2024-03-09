@@ -24,16 +24,15 @@ public:
 	Byte(int _data) : data((uint8_t)_data) { }
 	void Print() 
 	{ 
-		std::cout << "Byte: "
-		<< (*this)[bit<7>]() 
-		<< (*this)[bit<6>]() 
-		<< (*this)[bit<5>]() 
-		<< (*this)[bit<4>]() 
-		<< (*this)[bit<3>]() 
-		<< (*this)[bit<2>]() 
-		<< (*this)[bit<1>]() 
-		<< (*this)[bit<0>]() 
-		<< std::endl; 
+		std::cout << "0d"
+		<< (*this)[bit<7>]
+		<< (*this)[bit<6>]
+		<< (*this)[bit<5>]
+		<< (*this)[bit<4>]
+		<< (*this)[bit<3>]
+		<< (*this)[bit<2>] 
+		<< (*this)[bit<1>]
+		<< (*this)[bit<0>] 
 	}
 
 
